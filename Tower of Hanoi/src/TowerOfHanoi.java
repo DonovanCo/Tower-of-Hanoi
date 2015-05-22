@@ -2,20 +2,20 @@ public class TowerOfHanoi
 	{
 	public static void main (String[] args)
 		{
-		int n = 4;  
-		String StepsToSolution;
-		StepsToSolution = hanoi(n, 1, 3);
+		int n = 22;  //instantiates a variable to be used for number of Disks in the Tower
+		String StepsToSolution;//will contain solution to tower
+		StepsToSolution = hanoi(n, 1, 3);//CALLS hanoi method
 		System.out.println(StepsToSolution);
 		}
 	
-   public static String hanoi(int nDisks, int fromPeg, int toPeg)
+   public static String hanoi(int nDisks, int fromPeg, int toPeg)//nDisks is number of disks. fromPeg is the peg the disk is on. toPeg is the disks location. 
 	   {
-	   int helpPeg;
-	   String Sol1, Sol2, myStep, mySol;;
+	   int helpPeg;//helpPeg is used to tell what peg receives the next disk.
+	   String Sol1, Sol2, myStep, mySol;
 
 	   if ( nDisks == 1 )
 		   {
-		   return fromPeg + " -> " + toPeg + "\n";
+		   return fromPeg + " -> " + toPeg + "\n";//Base Case
 		   }
 	   
 	   else
